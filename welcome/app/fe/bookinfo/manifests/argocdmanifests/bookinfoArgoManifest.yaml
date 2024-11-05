@@ -16,6 +16,10 @@ spec:
     automated:
       prune: true
       selfHeal: true
+  hooks:
+    - type: SyncFail
+      command: ["/bin/sh", "-c"]
+      args: ["echo SyncFail hook executed"]
 
   # webhook:
   #   github:
